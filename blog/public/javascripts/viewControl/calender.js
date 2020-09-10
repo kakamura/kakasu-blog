@@ -39,8 +39,6 @@ function makeDay(day, month) {
     return message;
 }
 
-let standard = curDate = new Date();
-
 /**
  * 해당 달의 첫번째 월요일이 언제인지 찾아서 출력해주는 함수 (음수 값도 가능하다.)
  */
@@ -129,5 +127,6 @@ function FebDayOfLeafYear() {
     return '28';
 }
 
+let standard = curDate = new Date();
 writeToScreen(makeCalender(curDate.getFullYear(), curDate.getMonth() + 1));
 //writeToScreen(makeCalender(curDate.getFullYear(), curDate.getMonth() + 2));
