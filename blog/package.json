@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"   
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,5 +15,6 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.4",
     "pug": "2.0.0-beta11"
-  }
+  },
+  "homepage" : "https://kakamura.github.io/"
 }
