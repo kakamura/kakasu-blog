@@ -11,8 +11,15 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'DOSMyungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #basePage {
-  font-family: 'BMDOHYEON';
+  font-family: 'DOSMyungjo';
   text-align: center;
   font-size: 200px;
 
@@ -23,6 +30,6 @@ body {
   margin-right : 130px;
   text-align: right;
 
-  font-family: 'BMDOHYEON';
+  font-family: 'DOSMyungjo';
   font-size: 30px;
 }
