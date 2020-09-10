@@ -7,10 +7,11 @@ block content
       div(style="display:flex")
         div.index kakasu
         div.icons
-          button(onclick="showAbout()") ABOUT
-          button(onclick="showPortfolio()") PORTFOLIO
-          button(onclick="showBlog()") BLOG
-          button(onclick="showContact()") CONTACT
+          button(onclick="showAbout(); changeIndex('ABOUT');") ABOUT
+          button(onclick="showToDoList(); changeIndex('TODOLIST');") TODOLIST
+          button(onclick="showPortfolio(); changeIndex('PORTFOLIO');") PORTFOLIO
+          button(onclick="showBlog(); changeIndex('BLOG');") BLOG
+          button(onclick="showContact(); changeIndex('CONTACT');") CONTACT
         div.wsr
     
 

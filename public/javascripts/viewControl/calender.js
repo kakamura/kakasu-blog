@@ -1,5 +1,5 @@
 /* 입력받은 message를 id가 calender인 태그에 붙여주는 test code*/
-function wirteToCalender(message) {
+function writeToCalender(message) {
     let pre = document.createElement("div");
     pre.innerHTML = message;
     calender.appendChild(pre);
@@ -68,7 +68,7 @@ function makeCalender (year, month) {
     return message;
 }
 
-function removeAllChild() {
+function removeCalender() {
     const parent = document.getElementById("calender");
     while (parent.hasChildNodes()) {
         parent.removeChild( parent.firstChild );
@@ -76,17 +76,17 @@ function removeAllChild() {
 }
 
 function preMonth () {
-    removeAllChild();
+    removeCalender();
     standard.setMonth(standard.getMonth() - 1);
-    wirteToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+1));
-    //wirteToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+2));
+    writeToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+1));
+    //writeToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+2));
 }
 
 function nextMonth () {
-    removeAllChild();
+    removeCalender();
     standard.setMonth(standard.getMonth() + 1);
-    wirteToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+1));
-    // wirteToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+2));
+    writeToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+1));
+    // writeToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+2));
 }
 
 /*
@@ -124,5 +124,5 @@ function FebDayOfLeafYear() {
 }
 
 let standard = curDate = new Date();
-wirteToCalender(makeCalender(curDate.getFullYear(), curDate.getMonth() + 1));
-//wirteToCalender(makeCalender(curDate.getFullYear(), curDate.getMonth() + 2));
+writeToCalender(makeCalender(curDate.getFullYear(), curDate.getMonth() + 1));
+//writeToCalender(makeCalender(curDate.getFullYear(), curDate.getMonth() + 2));

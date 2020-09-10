@@ -4,7 +4,15 @@ function writeToContentIndex(message) {
     contentIndex.appendChild(pre);
 }
 
+function removeAllChild() {
+    const parent = document.getElementById("contentIndex");
+    while (parent.hasChildNodes()) {
+        parent.removeChild( parent.firstChild );
+    }
+}
+
 function init () {
+    removeAllChild();
     let message =
             `<p id ="writing"> 컴퓨터는 잘못하지 않는다.` +
             `<p>` + `tistory : kscodebase.tistory.com` +
@@ -14,4 +22,26 @@ function init () {
     writeToContentIndex(message);
 }
 
+function changeIndex(indexName) {
+    removeAllChild();
+    let message = 
+        `<p style = "font-family:'BMDOHYEON"> ${indexName}`;
+    writeToContentIndex(message);
+}
+
+/*
+function aboutIndex() {
+    removeAllChild();
+    let message = 
+        `<p style="font-size : 50px; font-family:'BMDOHYEON"> Stack`;
+    writeToContentIndex(message);
+}
+
+function aboutIndex() {
+    removeAllChild();
+    let message = 
+        `<p style="font-size : 50px; font-family:'BMDOHYEON"> Stack`;
+    writeToContentIndex(message);
+}
+*/
 init();

@@ -21,3 +21,7 @@ function showContact() {
 function showBase() {
     changeInnerframe('/iFrame/splash.html');
 }
+
+function showToDoList() {
+    changeInnerframe('/iFrame/toDoList.html');
+}
