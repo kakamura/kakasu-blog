@@ -1,0 +1,21 @@
+head
+    link(rel='stylesheet', href='/stylesheets/calenderStyle.css')
+body
+    block content
+    div(style="width:690px; height:300px;")
+      div(style="width:100%; height:100%;")
+        div(style="display:flex; margin-bottom:20px")
+          div(style="width:50%")
+            button(style="float:left" onclick="preMonth();") 왼쪽
+          div(style="width:50%; display:flex")
+            button(style="float:right; margin-left:auto" onclick="nextMonth();") 오른쪽
+
+        div(id='content' style = "display:flex; width:100%; height:100%")
+
+    div(style="display:flex")
+      div
+        span(id = "start" type="text" style="margin-right:30px; margin-left:140px")
+      div
+        span(id = "end" type="text")
+
+    script(type = "text/javascript" src="/javascripts/calender.js") 
