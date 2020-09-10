@@ -17,3 +17,7 @@ function showBlog() {
 function showContact() {
     changeInnerframe('/iFrame/contact.html');
 }
+
+function showBase() {
+    changeInnerframe('/iFrame/splash.html');
+}

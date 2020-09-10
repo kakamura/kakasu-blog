@@ -1,0 +1,28 @@
+body {
+    padding-left: 20px;
+    padding-right: 20px;
+    font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'BMDOHYEON';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#basePage {
+  font-family: 'BMDOHYEON';
+  text-align: center;
+  font-size: 200px;
+
+  margin-top: 17%;
+}
+
+#additional {
+  margin-right : 130px;
+  text-align: right;
+
+  font-family: 'BMDOHYEON';
+  font-size: 30px;
+}

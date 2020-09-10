@@ -1,4 +1,4 @@
-function writeToScreen(message) {
+function writeToContentIndex(message) {
     let pre = document.createElement("div");
     pre.innerHTML = message;
     contentIndex.appendChild(pre);
@@ -11,7 +11,7 @@ function init () {
             `<p>` + `google  : kscodebase@gmail.com`   +
             `<p>` + `github  : kakamura`               +
             `<p>` + `univ.   : gachon univ.`           ;
-    writeToScreen(message);
+    writeToContentIndex(message);
 }
 
 init();

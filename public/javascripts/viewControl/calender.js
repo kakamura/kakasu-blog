@@ -1,5 +1,5 @@
 /* 입력받은 message를 id가 calender인 태그에 붙여주는 test code*/
-function writeToScreen(message) {
+function wirteToCalender(message) {
     let pre = document.createElement("div");
     pre.innerHTML = message;
     calender.appendChild(pre);
@@ -21,7 +21,6 @@ function makeCalenderHead (year, month) {
  */
 function setColor(day, mon) {
     if (day <= 0 || day > month(`${mon}`)) return '&nbsp;';
-    
     return day;
 }
 
@@ -78,19 +77,15 @@ function removeAllChild() {
 function preMonth () {
     removeAllChild();
     standard.setMonth(standard.getMonth() - 1);
-    writeToScreen(makeCalender(standard.getFullYear(), standard.getMonth()+1));
-    //writeToScreen(makeCalender(standard.getFullYear(), standard.getMonth()+2));
+    wirteToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+1));
+    //wirteToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+2));
 }
 
 function nextMonth () {
     removeAllChild();
     standard.setMonth(standard.getMonth() + 1);
-    writeToScreen(makeCalender(standard.getFullYear(), standard.getMonth()+1));
-    //writeToScreen(makeCalender(standard.getFullYear(), standard.getMonth()+2));
-}
-
-function printId() {
-    console.log(this.id);
+    wirteToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+1));
+    // wirteToCalender(makeCalender(standard.getFullYear(), standard.getMonth()+2));
 }
 
 /*
@@ -128,5 +123,5 @@ function FebDayOfLeafYear() {
 }
 
 let standard = curDate = new Date();
-writeToScreen(makeCalender(curDate.getFullYear(), curDate.getMonth() + 1));
-//writeToScreen(makeCalender(curDate.getFullYear(), curDate.getMonth() + 2));
+wirteToCalender(makeCalender(curDate.getFullYear(), curDate.getMonth() + 1));
+//wirteToCalender(makeCalender(curDate.getFullYear(), curDate.getMonth() + 2));
