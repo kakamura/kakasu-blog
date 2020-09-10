@@ -1,2 +1,7 @@
 # project
-what I wan to make
+
+```
+heroku git:remote -a kakasu-blog
+git push heroku master
+```
+

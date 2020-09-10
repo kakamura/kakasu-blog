@@ -30,11 +30,12 @@ function setColor(day, mon) {
  */
 function makeDay(day, month) {
     let message = 
-    `<div id = ${month + 'month' +  day}day>` + `${setColor(day, month)}           </div>` +
-    `<div id = ${month + 'month' +  day}day>` + `${setColor(day = day + 7, month)} </div>` +
-    `<div id = ${month + 'month' +  day}day>` + `${setColor(day = day + 7, month)} </div>` +
-    `<div id = ${month + 'month' +  day}day>` + `${setColor(day = day + 7, month)} </div>` +
-    `<div id = ${month + 'month' +  day}day>` + `${setColor(day = day + 7, month)} </div>` ;
+    `<div>` + `${setColor(day, month)}           </div>` +
+    `<div>` + `${setColor(day = day + 7, month)} </div>` +
+    `<div>` + `${setColor(day = day + 7, month)} </div>` +
+    `<div>` + `${setColor(day = day + 7, month)} </div>` +
+    `<div>` + `${setColor(day = day + 7, month)} </div>` +
+    `<div>` + `${setColor(day = day + 7, month)} </div>` ;
     return message;
 }
 
