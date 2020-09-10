@@ -103,6 +103,10 @@ days.addEventListener('click', function (e) {
 })
 */
 
+/**
+ * 
+ * @param {string} mon
+ */
 function month(mon) {
     switch (mon) {
         case '1':

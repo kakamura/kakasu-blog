@@ -7,10 +7,10 @@ block content
       div(style="display:flex")
         div.index kakasu
         div.icons
-          span ABOUT
-          span PORTFOLIO
-          span BLOG
-          span CONTACT
+          button(onclick="showAbout()") ABOUT
+          button(onclick="showPortfolio()") PORTFOLIO
+          button(onclick="showBlog()") BLOG
+          button(onclick="showContact()") CONTACT
         div.wsr
     
 
@@ -27,8 +27,7 @@ block content
               button.calenderRButton(onclick="nextMonth()") next
       div.verticalLine
       
-      content
-        article content
+      iframe#contentBox(src="", frameborder="0")
               
     footer 
       .container
@@ -38,3 +37,4 @@ block content
         a(href='#') View Source
 
     script(src="/javascripts/viewControl/calender.js")
+    script(src="/javascripts/viewControl/changeContent.js")
