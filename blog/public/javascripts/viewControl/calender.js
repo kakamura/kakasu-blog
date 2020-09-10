@@ -5,27 +5,12 @@ function writeToScreen(message) {
     calender.appendChild(pre);
 }
 
-const month = {
-    1  : 31,
-    2  : 28,
-    3  : 31,
-    4  : 30,
-    5  : 31,
-    6  : 30,
-    7  : 31,
-    8  : 31,
-    9  : 30,
-    10 : 31,
-    11 : 30,
-    12 : 31,
-};
-
 /**
  * 
  * @param {int} year   년
  * @param {int} month  월
  */
-function makeHeader (year, month) {
+function makeCalenderHead (year, month) {
     if(month == 13) month = 1;
     return `${year}년 ${month}월`;
 }
@@ -35,7 +20,8 @@ function makeHeader (year, month) {
  * @param {int} day    일
  */
 function setColor(day, mon) {
-    if (day <= 0 || day > month[`${mon}`]) return '&nbsp;';
+    if (day <= 0 || day > month(`${mon}`)) return '&nbsp;';
+    
     return day;
 }
 
@@ -70,7 +56,7 @@ function makeCalender (year, month) {
     standardDay = getStandard(year, month);
 
     let message = 
-    `<div class = "header">` + makeHeader(year, month) +
+    `<div class = "CalenderHead" style="height:180px">` + makeCalenderHead(year, month) +
         `<div class ="days" style = "display:flex;">`  +
             `<div class = "day"> 월` +     makeDay(standardDay++, month) + `</div>` +
             `<div class = "day"> 화` +     makeDay(standardDay++, month) + `</div>` +
@@ -95,14 +81,14 @@ function preMonth () {
     removeAllChild();
     standard.setMonth(standard.getMonth() - 1);
     writeToScreen(makeCalender(standard.getFullYear(), standard.getMonth()+1));
-    writeToScreen(makeCalender(standard.getFullYear(), standard.getMonth()+2));
+    //writeToScreen(makeCalender(standard.getFullYear(), standard.getMonth()+2));
 }
 
 function nextMonth () {
     removeAllChild();
     standard.setMonth(standard.getMonth() + 1);
     writeToScreen(makeCalender(standard.getFullYear(), standard.getMonth()+1));
-    writeToScreen(makeCalender(standard.getFullYear(), standard.getMonth()+2));
+    //writeToScreen(makeCalender(standard.getFullYear(), standard.getMonth()+2));
 }
 
 function printId() {
@@ -116,7 +102,28 @@ days.addEventListener('click', function (e) {
     document.getElementById('start').innerHTML= (e.target.id.split('month')[1]);
 })
 */
- 
+
+function month(mon) {
+    switch (mon) {
+        case '1':
+        case '3':
+        case '5':
+        case '7':
+        case '8':
+        case '10':
+        case '12':
+            return '31';
+        case '2':
+            return FebDayOfLeafYear();
+        default:
+            return '30';
+    }
+};
+
+function FebDayOfLeafYear() {
+    if(standard.getFullYear() % 4 === 0) return '29';
+    return '28';
+}
 
 writeToScreen(makeCalender(curDate.getFullYear(), curDate.getMonth() + 1));
-writeToScreen(makeCalender(curDate.getFullYear(), curDate.getMonth() + 2));
+//writeToScreen(makeCalender(curDate.getFullYear(), curDate.getMonth() + 2));

@@ -39,6 +39,7 @@ hr {
 
 section {
   display: flex;
+  min-height: 800px;
 }
 
 .icons>span {
@@ -47,7 +48,10 @@ section {
 
 aside {
   width:15%;
-  height: 800px;
+}
+
+#contentIndex {
+  height:70%;
 }
 
 .verticalLine {
