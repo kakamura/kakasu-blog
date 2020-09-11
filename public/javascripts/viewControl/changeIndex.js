@@ -1,7 +1,6 @@
 function writeToContentIndex(message) {
     let pre = document.createElement("div");
     pre.innerHTML = message;
-    console.log(document.getElementById('contentIndex'));
     contentIndex.appendChild(pre);
 }
 

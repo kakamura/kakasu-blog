@@ -1,7 +1,7 @@
 function writeToPortfolio(message) {
     let pre = document.createElement("div");
     pre.innerHTML = message;
-    portfolio.appendChild(pre);
+    common.appendChild(pre);
 }
 
 function makePortfolio (content, link) {
