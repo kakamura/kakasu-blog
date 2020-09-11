@@ -6,10 +6,10 @@ function writeToPortfolio(message) {
 
 function makePortfolio (content, link) {
     let message = 
-    `<button onclick = 'showToDoList()'>` +
+    `<button onclick = 'changeIndex("TODOLIST")'>` +
         `<a href = "${link}"> ${content}` +
     `</button>`;
     writeToPortfolio(message);
 }
 
-makePortfolio('1. airbnb', 'http://kakasu-bnb.herokuapp.com/');
+makePortfolio('1. airbnb', 'https://kakasu-bnb.herokuapp.com/');

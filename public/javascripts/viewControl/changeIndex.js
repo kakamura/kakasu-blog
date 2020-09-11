@@ -6,13 +6,14 @@ function writeToContentIndex(message) {
 
 function removeAllChild() {
     const parent = document.getElementById("contentIndex");
+    if(parent === null) return;
     while (parent.hasChildNodes()) {
         parent.removeChild( parent.firstChild );
     }
 }
 
 function init () {
-    removeAllChild();
+    //removeAllChild();
     let message =
             `<p id ="writing"> 컴퓨터는 잘못하지 않는다.` +
             `<p>` + `tistory : kscodebase.tistory.com` +
@@ -22,6 +23,7 @@ function init () {
     writeToContentIndex(message);
 }
 
+// changeIndex('PORTFOLIO');
 function changeIndex(indexName) {
     removeAllChild();
     let message = 

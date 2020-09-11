@@ -33,3 +33,9 @@ body {
   font-family: 'DOSMyungjo';
   font-size: 30px;
 }
+
+button{
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+}
