@@ -1,6 +1,7 @@
 function writeToContentIndex(message) {
     let pre = document.createElement("div");
     pre.innerHTML = message;
+    console.log(document.getElementById('contentIndex'));
     contentIndex.appendChild(pre);
 }
 
@@ -32,10 +33,10 @@ function changeIndex(indexName) {
 }
 
 /*
-function aboutIndex() {
+function portfolioIndex() {
     removeAllChild();
     let message = 
-        `<p style="font-size : 50px; font-family:'BMDOHYEON"> Stack`;
+        `<p style="font-size : 50px; font-family:'BMDOHYEON"> PORTFOLIO`;
     writeToContentIndex(message);
 }
 
@@ -46,4 +47,4 @@ function aboutIndex() {
     writeToContentIndex(message);
 }
 */
-init();
+// init();

@@ -7,7 +7,7 @@ function writeToPortfolio(message) {
 function makePortfolio (content, link) {
     let message = 
     `<button onclick = 'changeIndex("TODOLIST")'>` +
-        `<a href = "${link}"> ${content}` +
+        `<a href = "${link}" style = "height:100%"> ${content}` +
     `</button>`;
     writeToPortfolio(message);
 }
