@@ -21,6 +21,8 @@ makeFrame(languages, 'python.png', 2);
 appendContextWithClass(languages, null, 'interval');
 makeFrame(languages, 'java.png', 1);
 appendContextWithClass(languages, null, 'interval');
+makeFrame(languages, 'kotlin.png', 1);
+appendContextWithClass(languages, null, 'interval');
 makeFrame(languages, 'C-lang.png', 3);
 appendContextWithClass(languages, null, 'interval');
 makeFrame(languages, 'C++.png', 4);
@@ -43,5 +45,7 @@ appendContextWithClass(frontend, null, 'interval');
 makeFrame(devops, 'git.png', 3);
 appendContextWithClass(devops, null, 'interval');
 makeFrame(devops, 'NCP.png', 2);
+appendContextWithClass(devops, null, 'interval');
+makeFrame(devops, 'heroku.png', 2);
 appendContextWithClass(devops, null, 'interval');
 

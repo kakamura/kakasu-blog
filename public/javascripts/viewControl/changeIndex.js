@@ -12,15 +12,18 @@ const removeAllChild = () => {
     }
 }
 
-const init = () => {
-    let message =
-    `
+const initMessage =     
+`
     <p id ="writing"> 컴퓨터는 잘못하지 않는다. </p>
     <p> tistory : kscodebase.tistory.com </p>
     <p> google  : kscodebase@gmail.com </p>
     <p> github  : kakasoo </p>
     <p> univ.   : gachon univ. </p>
-    `
+`;
+
+
+const init = () => {
+    message = initMessage;
     writeToContentIndex(message);
 }
 
@@ -38,50 +41,22 @@ const aboutContent = () => {
 }
 
 const blogContent = () => {
-    let message =
-    `
-    <p id ="writing"> 컴퓨터는 잘못하지 않는다. </p>
-    <p> tistory : kscodebase.tistory.com </p>
-    <p> google  : kscodebase@gmail.com </p>
-    <p> github  : kakasoo </p>
-    <p> univ.   : gachon univ. </p>
-    `
+    let message = initMessage;
     return message;
 }
 
 const careerContent = () => {
-    let message =
-    `
-    <p id ="writing"> 컴퓨터는 잘못하지 않는다. </p>
-    <p> tistory : kscodebase.tistory.com </p>
-    <p> google  : kscodebase@gmail.com </p>
-    <p> github  : kakasoo </p>
-    <p> univ.   : gachon univ. </p>
-    `
+    let message = initMessage;
     return message;
 }
 
 const portfolioContent = () => {
-    let message =
-    `
-    <p id ="writing"> 컴퓨터는 잘못하지 않는다. </p>
-    <p> tistory : kscodebase.tistory.com </p>
-    <p> google  : kscodebase@gmail.com </p>
-    <p> github  : kakasoo </p>
-    <p> univ.   : gachon univ. </p>
-    `
+    let message = initMessage;
     return message;
 }
 
 const toDoListContent = () => {
-    let message =
-    `
-    <p id ="writing"> 컴퓨터는 잘못하지 않는다. </p>
-    <p> tistory : kscodebase.tistory.com </p>
-    <p> google  : kscodebase@gmail.com </p>
-    <p> github  : kakasoo </p>
-    <p> univ.   : gachon univ. </p>
-    `
+    let message = initMessage;
     return message;
 }
 
@@ -97,6 +72,5 @@ const changeIndex = (indexName) => {
     removeAllChild();
     let message = `<p id = "writing"> ${indexName}`;
     message += explainContent(indexName);
-    console.log(message);
     writeToContentIndex(message);
 }
