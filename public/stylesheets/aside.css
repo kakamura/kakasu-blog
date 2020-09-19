@@ -3,6 +3,10 @@
     font-size : 14px;
 }
 
+aside {
+    min-width: 180px;
+}
+
 #writing {
     font-family: 'BMDOHYEON';
     font-weight: 900;

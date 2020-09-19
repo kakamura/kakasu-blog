@@ -26,8 +26,7 @@ function init () {
 // changeIndex('PORTFOLIO');
 function changeIndex(indexName) {
     removeAllChild();
-    let message = 
-        `<p style = "font-family:'BMDOHYEON"> ${indexName}`;
+    let message = `<p style = "font-family:'BMDOHYEON"> ${indexName}`;
     writeToContentIndex(message);
 }
 

@@ -1,5 +1,6 @@
 #languages {
     font-size : 22px;
+    display:flex;
 }
 
 #back-end {
@@ -17,3 +18,11 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.languages {
+    min-width:100px;
+    min-height:100px;
+    max-width: 100px;
+    max-height: 100px;
+}
+

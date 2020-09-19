@@ -14,8 +14,8 @@ function showBlog() {
     changeInnerframe('/iFrame/blog.html');
 }
 
-function showContact() {
-    changeInnerframe('/iFrame/contact.html');
+function showCareer() {
+    changeInnerframe('/iFrame/career.html');
 }
 
 function showBase() {
