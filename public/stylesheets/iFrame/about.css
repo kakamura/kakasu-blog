@@ -1,16 +1,32 @@
+img {
+    width : 100%;
+    height : 100%;
+    object-fit : contain;
+}
+
+p {
+    margin: 5px;
+}
+
 #languages {
     font-size : 22px;
     display:flex;
 }
 
-#back-end {
+#backend {
     font-size : 22px;
+    display:flex;
 }
 
-#front-end {
+#frontend {
     font-size : 22px;
+    display:flex;
 }
 
+#devops {
+    font-size : 22px;
+    display:flex;
+}
 
 @font-face {
     font-family: 'BMDOHYEON';
@@ -20,9 +36,45 @@
 }
 
 .languages {
-    min-width:100px;
-    min-height:100px;
-    max-width: 100px;
-    max-height: 100px;
+    min-width:120px;
+    min-height:120px;
+    max-width: 120px;
+    max-height: 120px;
 }
 
+.point {
+    display: flex;
+    border: 1px solid black;
+    height: 10px;
+}
+
+.green {
+    border:1px solid black;
+    width: 20%;
+    height: 100%;
+    background-color: green;
+}
+
+.greenyellow {
+    border:1px solid black;
+    width: 20%;
+    height: 100%;
+    background-color: greenyellow;
+}
+
+.red {
+    border:1px solid black;
+    width: 20%;
+    height: 100%;
+    background-color: red;
+}
+
+.black {
+    border:1px solid black;
+    width: 20%;
+    height: 100%;
+}
+
+.interval {
+    margin-right: 50px;
+}
