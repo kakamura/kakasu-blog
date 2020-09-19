@@ -1,13 +1,16 @@
 #contentIndex > div > p {
-    margin: 10px 0 0 0;
+    margin: 5px 0 0 0;
     font-size : 14px;
+    letter-spacing: -0.2px;
 }
 
 aside {
     min-width: 180px;
 }
 
-#writing {
+#contentIndex > div > #writing {
+    margin: 10px 0 10px 0;
+
     font-family: 'BMDOHYEON';
     font-weight: 900;
 }
@@ -15,6 +18,13 @@ aside {
 @font-face {
     font-family: 'BMDOHYEON';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBMPlexSansKR-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
