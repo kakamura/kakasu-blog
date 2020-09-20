@@ -1,16 +1,10 @@
-/*
-function writeToPortfolio(message) {
-    let pre = document.createElement("div");
-    pre.innerHTML = message;
-    common.appendChild(pre);
-}
-*/
-
-function makePortfolio (content, link) {
+const makePortfolio = (content, link) => {
     let message = 
-    `<button onclick = ''>` +
-        `<a href = "${link}" style = "height:100%"> ${content}` +
-    `</button>`;
+    `
+    <button onclick = ''>
+        <a href = "${link}" style = "height:100%"> ${content} 
+    </button>
+    `
     appendContext(common, message);
 }
 

@@ -10,3 +10,9 @@ const appendContextWithClass = (from, message, className) => {
     pre.innerHTML = message;
     from.appendChild(pre);
 }
+
+const prependContext = (from, message) => {
+    let pre = document.createElement("div");
+    pre.innerHTML = message;
+    from.prepend(pre);
+}

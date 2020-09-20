@@ -12,7 +12,7 @@ block content
           button(onclick="showPortfolio(); changeIndex('PORTFOLIO');") PORTFOLIO
           button(onclick="showToDoList();  changeIndex('TODOLIST');" ) TODOLIST
           button(onclick="showBlog();      changeIndex('BLOG');"     ) BLOG
-          button(onclick="showCareer();   changeIndex('CAREER');"  ) CAREER
+          button(onclick="showCareer();    changeIndex('CAREER');"  ) CAREER
         div.wsr
     
 
@@ -35,6 +35,8 @@ block content
         p
         | &copy; 2020.09.10 made by kakasu |
         | JS is mine, JS is main, JS is meme!
+
+    script(src="/javascripts/util.js")
     script(src="/javascripts/viewControl/calender.js")
     script(src="/javascripts/viewControl/changeContent.js")
     script(src="/javascripts/viewControl/changeIndex.js")

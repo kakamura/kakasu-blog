@@ -9,7 +9,7 @@ const setPoint = (point) => {
 const makeFrame = (position, img, point) => {
     let message = 
     `
-    <img src = '../images/${img}' class = "languages"></img>
+    <img src = '../images/about/${img}' class = "languages"></img>
     <div class = "point">
         ${setPoint(point)}
     </div>        
@@ -17,35 +17,31 @@ const makeFrame = (position, img, point) => {
     appendContextWithClass(position, message, 'frame');
 }
 
-makeFrame(languages, 'python.png', 2);
-appendContextWithClass(languages, null, 'interval');
-makeFrame(languages, 'java.png', 1);
-appendContextWithClass(languages, null, 'interval');
-makeFrame(languages, 'kotlin.png', 1);
-appendContextWithClass(languages, null, 'interval');
-makeFrame(languages, 'C-lang.png', 3);
-appendContextWithClass(languages, null, 'interval');
-makeFrame(languages, 'C++.png', 4);
-appendContextWithClass(languages, null, 'interval');
-makeFrame(languages, 'javascript.png', 3);
-appendContextWithClass(languages, null, 'interval');
+const lang_names  = ['python.png', 'java.png', 'kotlin.png', 'C-lang.png', 'C++.png', 'javascript.png'];
+const lang_points = [2,1,1,3,4,3];
 
-makeFrame(backend, 'nodejs.png', 3);
-appendContextWithClass(backend, null, 'interval');
-makeFrame(backend, 'mysql.png', 3);
-appendContextWithClass(backend, null, 'interval');
-makeFrame(backend, 'express.png', 3);
-appendContextWithClass(backend, null, 'interval');
+const back_names = ['nodejs.png','mysql.png','express.png']
+const back_points = [3,3,3];
 
-makeFrame(frontend, 'html.png', 2);
-appendContextWithClass(frontend, null, 'interval');
-makeFrame(frontend, 'CSS.png', 2);
-appendContextWithClass(frontend, null, 'interval');
+const front_names = ['html.png', 'CSS.png'];
+const front_points = [2,2];
 
-makeFrame(devops, 'git.png', 3);
-appendContextWithClass(devops, null, 'interval');
-makeFrame(devops, 'NCP.png', 2);
-appendContextWithClass(devops, null, 'interval');
-makeFrame(devops, 'heroku.png', 2);
-appendContextWithClass(devops, null, 'interval');
+const devops_names = ['git.png', 'NCP.png', 'heroku.png'];
+const devops_points = [3,2,2];
 
+const insertData = (pos, names, points) => {
+    if (pos === 'lang') pos = languages;
+    if (pos === 'front') pos = frontend;
+    if (pos === 'back') pos = backend;
+    if (pos === 'devops') pos = devops;
+    
+    for (let i in names) {
+        makeFrame(pos, names[i], points[i]);
+        appendContextWithClass(pos, null, 'interval');
+    }
+}
+
+insertData('lang', lang_names, lang_points);
+insertData('front',back_names, back_points);
+insertData('back',front_names, front_points);
+insertData('devops',devops_names, devops_points);
