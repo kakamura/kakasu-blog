@@ -25,5 +25,5 @@ const delayTime = () => {
     document.getElementById('verticalLine').appendChild(loadingScreen);
     setTimeout(() => {
         loadingScreen.remove();
-    }, 100);
+    }, 200);
 }
