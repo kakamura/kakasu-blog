@@ -1,7 +1,7 @@
-const articleBox = (img, title, content) => {
+const articleBox = (link, img, title, content) => {
     const message = 
     `
-    <a href = '/' class = 'article'>
+    <a href = '../blog/${link}' class = 'article'>
         <img src = '../images/blog/${img}' class = "article_img"></img>
             <div class = 'articleText'>
                 <p class = 'articleTitle'> ${title} </p>
@@ -13,12 +13,11 @@ const articleBox = (img, title, content) => {
     return message;
 }
 
-const makeArticle = () => {
-    const message = articleBox('../about/javascript.png', '이것은 제목입니다.', '이것은 내용입니다.');
+const makeArticle = ({link, image = '../about/javascript.png', title = 'Title is not defined.', summary = 'Summary is not defined.'}) => {
+    const message = articleBox(link, image, title, summary);
     prependContext(common, message);
 }
 
-makeArticle();
-makeArticle();
-makeArticle();
-makeArticle();
+//makeArticle({link: '', image: '', title : '', summary:''});
+
+makeArticle({link: 'blog_1.html', title : '이것이 제목', summary:'이것은 내용입니다.'});

@@ -27,7 +27,7 @@ const init = () => {
     writeToContentIndex(message);
 }
 
-const aboutContent = () => {
+const stackContent = () => {
     let message =
     `
     <p id ="writing"> kakasoo의 기술 스택 </p>
@@ -37,6 +37,11 @@ const aboutContent = () => {
     <p> 4점 : 메인으로 할 수 있다. </p>
     <p> 5점 : 가르칠 수 있는 수준. </p>
     `
+    return message;
+}
+
+const aboutContent = () => {
+    let message = initMessage;
     return message;
 }
 
@@ -55,17 +60,18 @@ const portfolioContent = () => {
     return message;
 }
 
-const toDoListContent = () => {
+const checkoutContent = () => {
     let message = initMessage;
     return message;
 }
 
 const explainContent = (indexName) => {
     if(indexName === 'ABOUT') return aboutContent();
+    if(indexName === 'STACK') return stackContent();
     if(indexName === 'BLOG') return blogContent();
     if(indexName === 'CAREER') return careerContent();
     if(indexName === 'PORTFOLIO') return portfolioContent();
-    if(indexName === 'TODOLIST') return toDoListContent();
+    if(indexName === 'CHECKOUT') return checkoutContent();
 }
 
 const changeIndex = (indexName) => {
