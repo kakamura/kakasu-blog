@@ -1,18 +1,18 @@
 const appendContext = (from, message) => {
-    let pre = document.createElement("div");
+    const pre = document.createElement("div");
     pre.innerHTML = message;
     from.appendChild(pre);
 }
 
 const appendContextWithClass = (from, message, className) => {
-    let pre = document.createElement("div");
+    const pre = document.createElement("div");
     pre.className = className;
     pre.innerHTML = message;
     from.appendChild(pre);
 }
 
 const prependContext = (from, message) => {
-    let pre = document.createElement("div");
+    const pre = document.createElement("div");
     pre.innerHTML = message;
     from.prepend(pre);
 }
@@ -22,7 +22,9 @@ const delayTime = () => {
     loadingScreen.id = 'loading';
     loadingScreen.innerHTML = 'NOW LOADING...';
 
-    document.getElementById('verticalLine').appendChild(loadingScreen);
+    const verticalLine = document.getElementById('verticalLine');
+    if (verticalLine.childNodes.length) return;
+    verticalLine.appendChild(loadingScreen);
     setTimeout(() => {
         loadingScreen.remove();
     }, 1000);

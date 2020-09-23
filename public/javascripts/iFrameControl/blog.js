@@ -19,5 +19,4 @@ const makeArticle = ({link, image = '../about/javascript.png', title = 'Title is
 }
 
 //makeArticle({link: '', image: '', title : '', summary:''});
-
 makeArticle({link: 'blog_1.html', title : '이것이 제목', summary:'이것은 내용입니다.'});

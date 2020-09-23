@@ -1,5 +1,5 @@
 const makePortfolio = (content, link) => {
-    let message = 
+    const message = 
     `
     <button onclick = ''>
         <a href = "${link}" style = "height:100%"> ${content} 

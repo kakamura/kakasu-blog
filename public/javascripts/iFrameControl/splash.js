@@ -1,5 +1,5 @@
 const doBlink = () => {
-    let blink  = document.getElementById("basePage");
+    const blink  = document.getElementById("basePage");
     blink.style.visibility = blink.style.visibility == "" ? "hidden" : "";
 }
 

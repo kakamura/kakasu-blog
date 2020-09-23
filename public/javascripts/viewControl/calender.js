@@ -9,7 +9,7 @@ const setColor = (day, mon) => {
 }
 
 const makeDay = (day, month) => {
-    let message = 
+    const message = 
     `<div> ${setColor(day, month)}          </div>
     <div> ${setColor(day = day + 7, month)} </div>
     <div> ${setColor(day = day + 7, month)} </div>
@@ -27,7 +27,7 @@ const getStandard = (year, month) => {
 const makeCalender = (year, month) => {
     standardDay = getStandard(year, month);
 
-    let message = 
+    const message = 
     `<div class = "CalenderHead" style="height:180px">${makeCalenderHead(year, month)}
         <div class ="days" style = "display:flex;"> 
             <div class = "day"> 월     ${makeDay(standardDay++, month)} </div>
@@ -83,5 +83,5 @@ const FebDayOfLeafYear = () => {
     return '28';
 }
 
-let standard = curDate = new Date();
+const standard = curDate = new Date();
 appendContext(calender, makeCalender(curDate.getFullYear(), curDate.getMonth() + 1));

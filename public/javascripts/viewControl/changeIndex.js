@@ -1,5 +1,5 @@
 const writeToContentIndex = (message) => {
-    let pre = document.createElement("div");
+    const pre = document.createElement("div");
     pre.innerHTML = message;
     contentIndex.appendChild(pre);
 }
@@ -28,7 +28,7 @@ const init = () => {
 }
 
 const stackContent = () => {
-    let message =
+    const message =
     `
     <p id ="writing"> kakasoo의 기술 스택 </p>
     <p> 1점 : 배워 본 기억은... </p>
@@ -41,27 +41,27 @@ const stackContent = () => {
 }
 
 const aboutContent = () => {
-    let message = initMessage;
+    const message = initMessage;
     return message;
 }
 
 const blogContent = () => {
-    let message = initMessage;
+    const message = initMessage;
     return message;
 }
 
 const careerContent = () => {
-    let message = initMessage;
+    const message = initMessage;
     return message;
 }
 
 const portfolioContent = () => {
-    let message = initMessage;
+    const message = initMessage;
     return message;
 }
 
 const checkoutContent = () => {
-    let message = initMessage;
+    const message = initMessage;
     return message;
 }
 
@@ -76,7 +76,6 @@ const explainContent = (indexName) => {
 
 const changeIndex = (indexName) => {
     removeAllChild();
-    let message = `<p id = "writing"> ${indexName}`;
-    message += explainContent(indexName);
+    const message = `<p id = "writing"> ${indexName}` + explainContent(indexName);
     writeToContentIndex(message);
 }

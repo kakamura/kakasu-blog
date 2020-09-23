@@ -7,7 +7,7 @@ const setPoint = (point) => {
 }
 
 const makeFrame = (position, img, point) => {
-    let message = 
+    const message = 
     `
     <img src = '../images/about/${img}' class = "languages"></img>
     <div class = "point">
@@ -35,7 +35,7 @@ const insertData = (pos, names, points) => {
     if (pos === 'back') pos = backend;
     if (pos === 'devops') pos = devops;
     
-    for (let i in names) {
+    for (const i in names) {
         makeFrame(pos, names[i], points[i]);
         appendContextWithClass(pos, null, 'interval');
     }
