@@ -1,6 +1,7 @@
 const changeInnerframe = (url) => {
     document.getElementById("contentBox").src = url;
 }
+
 const showAbout = () => { changeInnerframe('/iFrame/about.html')}
 const showStack = () => { changeInnerframe('/iFrame/stack.html')}
 const showPortfolio = () => { changeInnerframe('/iFrame/portfolio.html')}

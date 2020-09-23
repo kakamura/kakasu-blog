@@ -8,12 +8,12 @@ block content
         div.index
           a(href='/' style="color:black") kakasoo
         div.icons
-          button(onclick="showAbout();     changeIndex('ABOUT');"    ) ABOUT
-          button(onclick="showStack();     changeIndex('STACK');"    ) STACK
-          button(onclick="showPortfolio(); changeIndex('PORTFOLIO');") PORTFOLIO
-          button(onclick="showCheckoutList();  changeIndex('CHECKOUT');" ) CHECKOUT
-          button(onclick="showBlog();      changeIndex('BLOG');"     ) BLOG
-          button(onclick="showCareer();    changeIndex('CAREER');"  ) CAREER
+          button(onclick="delayTime(); showAbout();         changeIndex('ABOUT');"    ) ABOUT
+          button(onclick="delayTime(); showStack();         changeIndex('STACK');"    ) STACK
+          button(onclick="delayTime(); showPortfolio();     changeIndex('PORTFOLIO');") PORTFOLIO
+          button(onclick="delayTime(); showCheckoutList();  changeIndex('CHECKOUT');" ) CHECKOUT
+          button(onclick="delayTime(); showBlog();          changeIndex('BLOG');"     ) BLOG
+          button(onclick="delayTime(); showCareer();        changeIndex('CAREER');"   ) CAREER
         div.wsr
     
 
@@ -27,7 +27,7 @@ block content
             div(style="display:flex")
               button.calenderLButton(onclick="preMonth()") pre
               button.calenderRButton(onclick="nextMonth()") next
-      div.verticalLine
+      div#verticalLine
       
       iframe#contentBox(src="/iFrame/splash.html", frameborder="0")
               
@@ -41,4 +41,5 @@ block content
     script(src="/javascripts/viewControl/calender.js")
     script(src="/javascripts/viewControl/changeContent.js")
     script(src="/javascripts/viewControl/changeIndex.js")
+    
     script init()

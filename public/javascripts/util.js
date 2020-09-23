@@ -16,3 +16,14 @@ const prependContext = (from, message) => {
     pre.innerHTML = message;
     from.prepend(pre);
 }
+
+const delayTime = () => {
+    const loadingScreen = document.createElement('div');
+    loadingScreen.id = 'loading';
+    loadingScreen.innerHTML = 'NOW LOADING...';
+
+    document.getElementById('verticalLine').appendChild(loadingScreen);
+    setTimeout(() => {
+        loadingScreen.remove();
+    }, 100);
+}

@@ -1,9 +1,7 @@
-function doBlink() {
+const doBlink = () => {
     let blink  = document.getElementById("basePage");
     blink.style.visibility = blink.style.visibility == "" ? "hidden" : "";
 }
 
-function startBlink() {
-    setInterval("doBlink()",800);
-}
+const startBlink= () => setInterval("doBlink()",800)
 window.onload = startBlink;

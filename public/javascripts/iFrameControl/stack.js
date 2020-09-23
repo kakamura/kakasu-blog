@@ -44,4 +44,4 @@ const insertData = (pos, names, points) => {
 insertData('lang', lang_names, lang_points);
 insertData('front', front_names, front_points);
 insertData('back', back_names, back_points);
-insertData('devops', devops_names, devops_points);
+insertData('devops', devops_names, devops_points);    
