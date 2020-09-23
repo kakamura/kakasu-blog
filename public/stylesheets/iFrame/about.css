@@ -1,0 +1,12 @@
+#intro {
+    min-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    word-break : nowrap;
+    display : inline-block;
+    text-overflow: ellipsis;
+}
+
+#intro > p {
+    margin: 0px;
+}

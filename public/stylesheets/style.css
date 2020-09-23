@@ -31,7 +31,7 @@ hr {
 .index {
   font-family: 'BMDOHYEON';
   font-size: 44px;
-  width: 60%;
+  width: 90%;
 }
 
 .icons {
@@ -42,8 +42,7 @@ hr {
 }
 
 .wsr {
-  margin-right: auto;
-  min-width: 20px;
+  margin-right: 10px;
 }
 
 section {

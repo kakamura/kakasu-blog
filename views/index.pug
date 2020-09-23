@@ -5,9 +5,9 @@ block content
     header
       div 
       div(style="display:flex")
-        div.index
+        div.index(style="float:left")
           a(href='/' style="color:black") kakasoo
-        div.icons
+        div.icons(style="display:flex")
           button(onclick="delayTime(); showAbout();         changeIndex('ABOUT');"    ) ABOUT
           button(onclick="delayTime(); showStack();         changeIndex('STACK');"    ) STACK
           button(onclick="delayTime(); showPortfolio();     changeIndex('PORTFOLIO');") PORTFOLIO
