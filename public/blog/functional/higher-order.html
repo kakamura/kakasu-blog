@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <link rel = 'stylesheet' href='/stylesheets/iFrame/article/article.css'>
+</head>
+<body>
+    <div style="margin: 50px;">
+        <img src="../../images/blog/javascript.jpg">
+        <h1>일급함수</h1>
+        
+        <p>함수를 출력하거나 값으로 다룰 수 있다, 즉 함수를 다른 변수와 동일하게 취급하는 것을 의미한다. 자바스크립트에서는 모든 것을 객체로 취급하기 때문에 함수 역시 예외가 아니다.</p>
+        
+        <h1>고차함수</h1>
+        <p>따라서, <b>'일급함수 지닌 언어'</b>에서는 아래와 같은 방식 역시 가능하다.</p>
+        
+        <li>함수를 매개변수로 받아 사용</li>
+        <pre class="prettyprint">const apply1 = f => f(1);
+const add2 = a => a + 2;
+console.log(apply1(add2));</pre>
+
+        <pre class="prettyprint">const time = (f,n) => {
+    let i = -1;
+    while(++i < n) f(i);
+    times(console.log, 3);
+}</pre>
+
+        <li>함수를 반환하는 함수</li>
+        <pre class="prettyprint">addMaker = a => b => a + b;
+const add10 = addMaker(10);
+console.log(add10(5))      // 15
+console.log(add10(10))     // 20</pre>
+        <p></p>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autoload=true&skin=sunburst&lang=css"></script>

@@ -1,30 +1,32 @@
-const articleBox = (link, img, title, content) => {
+const articleBox = (img, title, content) => {
     const message = `
-    <a href = '../blog/${link}' class = 'article'>
+    <div class = 'article'>
         <img src = '../images/blog/${img}' class = "article_img"></img>
             <div class = 'articleText'>
                 <p class = 'articleTitle'> ${title} </p>
                 <p class = 'articleContent'> ${content} </p>
             </div>
         </div>
-    </a>
+    </div>
     `;
     return message;
 };
 
 const makeArticle = ({
-    link,
     image = '../about/javascript.png',
     title = 'Title is not defined.',
     summary = 'Summary is not defined.',
 }) => {
-    const message = articleBox(link, image, title, summary);
+    const message = articleBox(image, title, summary);
     prependContext(common, message);
 };
 
-//makeArticle({link: '', image: '', title : '', summary:''});
 makeArticle({
-    link: 'blog_1.html',
-    title: '이것이 제목',
-    summary: '이것은 내용입니다.<br> 이것도 내용입니다.',
+    title: '자바스크립트 함수형 프로그래밍',
+    summary: `<a href = '../blog/functional/higher-order.html'>1. 고차함수</a><br>`,
+});
+
+makeArticle({
+    title: '자바스크립트 프로그래밍',
+    summary: ``,
 });
