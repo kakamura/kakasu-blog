@@ -36,6 +36,7 @@ img {
 }
 
 li {
+    white-space: nowrap;
     font-weight: 400;
 }
 

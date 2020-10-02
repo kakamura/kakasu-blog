@@ -23,7 +23,8 @@ const makeArticle = ({
 
 makeArticle({
     title: '자바스크립트 함수형 프로그래밍',
-    summary: `<a href = '../blog/functional/higher-order.html'>1. 고차함수</a><br>`,
+    summary: `<a href = '../blog/functional/higher-order.html'>1. 고차함수 (higher-order function)</a><br>
+    <a href = '../blog/functional/list-traversal.html'>2. 리스트 순회 (List Traversal)</a>`,
 });
 
 makeArticle({
