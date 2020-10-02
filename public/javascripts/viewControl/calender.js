@@ -1,34 +1,35 @@
 const makeCalenderHead = (year, month) => {
-    if(month == 13) month = 1;
+    if (month == 13) month = 1;
     return `${year}년 ${month}월`;
-}
+};
 
 const setColor = (day, mon) => {
     if (day <= 0 || day > month(`${mon}`)) return '&nbsp;';
     return day;
-}
+};
 
 const makeDay = (day, month) => {
-    const message = 
-    `<div> ${setColor(day, month)}          </div>
-    <div> ${setColor(day = day + 7, month)} </div>
-    <div> ${setColor(day = day + 7, month)} </div>
-    <div> ${setColor(day = day + 7, month)} </div>
-    <div> ${setColor(day = day + 7, month)} </div>
-    <div> ${setColor(day = day + 7, month)} </div>` ;
+    const message = `<div> ${setColor(day, month)}          </div>
+    <div> ${setColor((day = day + 7), month)} </div>
+    <div> ${setColor((day = day + 7), month)} </div>
+    <div> ${setColor((day = day + 7), month)} </div>
+    <div> ${setColor((day = day + 7), month)} </div>
+    <div> ${setColor((day = day + 7), month)} </div>`;
     return message;
-}
+};
 
 const getStandard = (year, month) => {
     standardDay = new Date(year, month);
-    return (1 - standardDay.getDay()) + 1;
-}
+    return 1 - standardDay.getDay() + 1;
+};
 
 const makeCalender = (year, month) => {
     standardDay = getStandard(year, month);
 
-    const message = 
-    `<div class = "CalenderHead" style="height:180px">${makeCalenderHead(year, month)}
+    const message = `<div class = "CalenderHead" style="height:180px">${makeCalenderHead(
+        year,
+        month
+    )}
         <div class ="days" style = "display:flex;"> 
             <div class = "day"> 월     ${makeDay(standardDay++, month)} </div>
             <div class = "day"> 화     ${makeDay(standardDay++, month)} </div>
@@ -36,30 +37,39 @@ const makeCalender = (year, month) => {
             <div class = "day"> 목     ${makeDay(standardDay++, month)} </div>
             <div class = "day"> 금     ${makeDay(standardDay++, month)} </div>
             <div class = "day sat"> 토 ${makeDay(standardDay++, month)} </div>
-            <div class = "day sun"> 일 ${makeDay(standardDay++, month)} </div>    
+            <div class = "day sun"> 일 ${makeDay(
+                standardDay++,
+                month
+            )} </div>    
         </div>
     </div>`;
     return message;
-}
+};
 
 const removeCalender = () => {
-    const parent = document.getElementById("calender");
+    const parent = document.getElementById('calender');
     while (parent.hasChildNodes()) {
-        parent.removeChild( parent.firstChild );
+        parent.removeChild(parent.firstChild);
     }
-}
+};
 
 const preMonth = () => {
     removeCalender();
     standard.setMonth(standard.getMonth() - 1);
-    appendContext(calender, makeCalender(standard.getFullYear(), standard.getMonth()+1));
-}
+    appendContext(
+        calender,
+        makeCalender(standard.getFullYear(), standard.getMonth() + 1)
+    );
+};
 
 const nextMonth = () => {
     removeCalender();
     standard.setMonth(standard.getMonth() + 1);
-    appendContext(calender, makeCalender(standard.getFullYear(), standard.getMonth()+1));
-}
+    appendContext(
+        calender,
+        makeCalender(standard.getFullYear(), standard.getMonth() + 1)
+    );
+};
 
 const month = (mon) => {
     switch (mon) {
@@ -79,9 +89,12 @@ const month = (mon) => {
 };
 
 const FebDayOfLeafYear = () => {
-    if(standard.getFullYear() % 4 === 0) return '29';
+    if (standard.getFullYear() % 4 === 0) return '29';
     return '28';
-}
+};
 
-const standard = curDate = new Date();
-appendContext(calender, makeCalender(curDate.getFullYear(), curDate.getMonth() + 1));
+const standard = (curDate = new Date());
+appendContext(
+    calender,
+    makeCalender(curDate.getFullYear(), curDate.getMonth() + 1)
+);

@@ -4,7 +4,7 @@ a {
 }
 
 .article {
-    border: 1px solid red;
+    border: 1px solid black;
     min-width: 700px;
     min-height: 250px;
     margin: 50px;
@@ -16,7 +16,7 @@ a {
     height: 250px;
     min-width: 250px;
     min-height: 250px;
-    border : 1px solid black;
+    border-right: 1px solid black;
 }
 
 .articleText {
@@ -25,4 +25,8 @@ a {
 
 .title {
     font-size: 40px;
+}
+
+.articleContent {
+    font-size: 18px;
 }
