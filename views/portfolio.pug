@@ -1,29 +1,23 @@
 extends layout
 
 block content
+  head
+    link(rel = 'stylesheet' href='/stylesheets/iFrame/portfolio.css')
   body
-    include components/header.pug
+    include components/header.pug 
 
     section
       include components/aside.pug
-      
       div#verticalLine
       
       div#page(style="width:100%; height:100%;")
-        div#common
-          div#basePage hello, world!
-          div
-            div.additional this is kakasoo's blog</div>
-            div.additional created from 2020.09.10</div>              
+        #common 포트폴리오 페이지입니다.
 
     include components/footer.pug
 
-
-    script(src="/javascripts/iFrameControl/splash.js")
     script(src="/javascripts/util.js")
     script(src="/javascripts/viewControl/calender.js")
     script(src="/javascripts/viewControl/controlCalender.js")
     script(src="/javascripts/viewControl/changeContent.js")
     script(src="/javascripts/viewControl/changeIndex.js")
-    
     script init()

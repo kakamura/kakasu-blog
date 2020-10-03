@@ -7,6 +7,11 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const stackRouter = require('./routes/stack');
+const aboutRouter = require('./routes/about');
+const blogRouter = require('./routes/blog');
+const careerRouter = require('./routes/career');
+const checkoutRouter = require('./routes/checkout');
+const portfolioRouter = require('./routes/portfolio');
 
 const app = express();
 
@@ -22,6 +27,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/stack', stackRouter);
+app.use('/about', aboutRouter);
+app.use('/blog', blogRouter);
+app.use('/career', careerRouter);
+app.use('/checkout', checkoutRouter);
+app.use('/portfolio', portfolioRouter);
 
 app.use(function (req, res, next) {
     next(createError(404));
