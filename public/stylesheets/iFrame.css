@@ -17,6 +17,10 @@ body {
   font-style: normal;
 }
 
+#common {
+  margin: 50px;
+}
+
 #basePage {
   font-family: 'DOSMyungjo';
   text-align: center;
@@ -25,7 +29,7 @@ body {
   margin-top: 17%;
 }
 
-#additional {
+.additional {
   margin-right : 130px;
   text-align: right;
 

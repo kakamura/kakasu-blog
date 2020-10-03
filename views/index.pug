@@ -5,15 +5,21 @@ block content
     header
       div 
       div(style="display:flex")
-        div.index(style="float:left")
-          a(href='/' style="color:black") kakasoo
+        div#index(style="float:left;")
+          a(href='/' style="color:black; font-family:'BMDOHYEON'; font-size:44px; width:90%") kakasoo
         div.icons(style="display:flex")
-          button(onclick="showAbout();         changeIndex('ABOUT');"    ) ABOUT
-          button(onclick="showStack();         changeIndex('STACK');"    ) STACK
-          button(onclick="showPortfolio();     changeIndex('PORTFOLIO');") PORTFOLIO
-          button(onclick="showCheckoutList();  changeIndex('CHECKOUT');" ) CHECKOUT
-          button(onclick="showBlog();          changeIndex('BLOG');"     ) BLOG
-          button(onclick="showCareer();        changeIndex('CAREER');"   ) CAREER
+          button
+            a(href ='/about') ABOUT
+          button
+            a(href ='/stack') STACK
+          button
+            a(href ='/portfolio') PORTFOLIO
+          button
+            a(href ='/checkout') CHECKOUT
+          button
+            a(href ='/blog') BLOG
+          button
+            a(href ='/career') CAREER
         div.wsr
     
 
@@ -29,13 +35,19 @@ block content
               button.calenderRButton(onclick="nextMonth()") next
       div#verticalLine
       
-      iframe#contentBox(src="/iFrame/splash.html", frameborder="0")
-              
+      div#common
+        div#basePage hello, world!
+        div
+          div.additional this is kakasoo's blog</div>
+          div.additional created from 2020.09.10</div>              
     footer 
       .container
         p
         | &copy; 2020.09.10 made by kakasu |
         | JS is mine, JS is main, JS is meme!
+
+
+    script(src="/javascripts/iFrameControl/splash.js")
 
     script(src="/javascripts/util.js")
     script(src="/javascripts/viewControl/calender.js")

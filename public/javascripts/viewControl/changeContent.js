@@ -1,3 +1,4 @@
+/*
 const changeInnerframe = (url) =>
     (document.getElementById('contentBox').src = url);
 
@@ -8,3 +9,4 @@ const showBlog = () => changeInnerframe('/iFrame/blog.html');
 const showCareer = () => changeInnerframe('/iFrame/career.html');
 const showBase = () => changeInnerframe('/iFrame/splash.html');
 const showCheckoutList = () => changeInnerframe('/iFrame/checkout.html');
+*/

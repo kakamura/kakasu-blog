@@ -28,7 +28,7 @@ hr {
   padding-right: 0px;
 }
 
-.index {
+#index {
   font-family: 'BMDOHYEON';
   font-size: 44px;
   width: 90%;
@@ -82,7 +82,7 @@ aside {
   border-right: 1px black solid;
 }
 
-.icons > button {
+.icons > button > a {
   color: black;
   text-decoration-line: none;
 }
