@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  head
+    link(rel = 'stylesheet' href='/stylesheets/iFrame/blog.css')
+  body
+    include components/header.pug 
+
+    section
+      include components/aside.pug
+      div#verticalLine
+      
+      div#page(style="width:100%; height:100%;")
+        #common
+        img(src="../../images/blog/javascript.jpg")
+        h1 일급함수
+        p 함수를 출력하거나 값으로 다룰 수 있다, 즉 함수를 다른 변수와 동일하게 취급하는 것을 의미한다. 자바스크립트에서는 모든 것을 객체로 취급하기 때문에 함수 역시 예외가 아니다.        
+        h1 고차함수
+        p 따라서, '일급함수 지닌 언어'에서는 아래와 같은 방식 역시 가능하다.        
+        li 함수를 매개변수로 받아 사용
+        pre.prettyprint const apply1 = f => f(1);
+const add2 = a => a + 2;
+console.log(apply1(add2));
+
+        pre.prettyprint const time = (f,n) => {
+    let i = -1;
+    while(++i < n) f(i);
+    times(console.log, 3);
+}
+
+        li 함수를 반환하는 함수
+        pre.prettyprint addMaker = a => b => a + b;
+const add10 = addMaker(10);
+console.log(add10(5))      // 15
+console.log(add10(10))     // 20
+
+
+    include components/footer.pug
+
+    script(src="/javascripts/util.js")
+    script(src="/javascripts/viewControl/calender.js")
+    script(src="/javascripts/viewControl/controlCalender.js")
+    script(src="/javascripts/viewControl/changeContent.js")
+    script(src="/javascripts/viewControl/changeIndex.js")
+    script(src="../javascripts/iFrameControl/blog.js")
+    script init()
