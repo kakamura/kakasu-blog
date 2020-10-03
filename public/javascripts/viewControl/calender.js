@@ -19,12 +19,12 @@ const makeDay = (day, month) => {
 };
 
 const getStandard = (year, month) => {
-    standardDay = new Date(year, month);
+    const standardDay = new Date(year, month);
     return 1 - standardDay.getDay() + 1;
 };
 
 const makeCalender = (year, month) => {
-    standardDay = getStandard(year, month);
+    let standardDay = getStandard(year, month);
 
     const message = `<div class = "CalenderHead" style="height:180px">${makeCalenderHead(
         year,
@@ -44,31 +44,6 @@ const makeCalender = (year, month) => {
         </div>
     </div>`;
     return message;
-};
-
-const removeCalender = () => {
-    const parent = document.getElementById('calender');
-    while (parent.hasChildNodes()) {
-        parent.removeChild(parent.firstChild);
-    }
-};
-
-const preMonth = () => {
-    removeCalender();
-    standard.setMonth(standard.getMonth() - 1);
-    appendContext(
-        calender,
-        makeCalender(standard.getFullYear(), standard.getMonth() + 1)
-    );
-};
-
-const nextMonth = () => {
-    removeCalender();
-    standard.setMonth(standard.getMonth() + 1);
-    appendContext(
-        calender,
-        makeCalender(standard.getFullYear(), standard.getMonth() + 1)
-    );
 };
 
 const month = (mon) => {
@@ -92,8 +67,9 @@ const FebDayOfLeafYear = () => {
     if (standard.getFullYear() % 4 === 0) return '29';
     return '28';
 };
+const curDate = new Date();
+const standard = curDate;
 
-const standard = (curDate = new Date());
 appendContext(
     calender,
     makeCalender(curDate.getFullYear(), curDate.getMonth() + 1)

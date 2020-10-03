@@ -3,7 +3,18 @@
     "prettier.singleQuote": true,
     "prettier.tabWidth": 4,
     "eslint.options": {
-    
+    "preiiter" : {
+            "singleQuote": true,
+            "overrides": [
+              {
+                "files": "*.pug",
+                "options": {
+                  "parser": "pug",
+                  "singleQuote": true
+                }
+              }
+            ]
+          }
     },
     "editor.renderLineHighlightOnlyWhenFocus": true
 }
